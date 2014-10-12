@@ -1,6 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
   margin-bottom: 20px;
+  color: #0078c1;
+}
+
+a {
+  color: #0078c1;
 }
 
 p {
@@ -12,6 +17,7 @@ p {
 }
 
 body {
+  width: 1220px;
   background-color: #e9f5fa;
   margin: 0;
 }
@@ -38,6 +44,10 @@ main {
   color: white;
 
   &.primary {
-    background-color: $primary-color;
+    background-color: #0078c1;
   }
+}
+
+img {
+  border-radius: 10px;
 }

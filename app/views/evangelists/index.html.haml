@@ -1,0 +1,11 @@
+.row.evangelists
+  %h1
+    Evangelists
+
+  %ul.lists.row
+    - @evangelists.each do |evangelist|
+      %li.medium-4.columns
+        = link_to image_tag(evangelist.image), evangelist_path(evangelist)
+        %h2
+          = link_to evangelist.fullname, evangelist_path(evangelist)
+
