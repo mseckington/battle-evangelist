@@ -6,3 +6,11 @@
     %p= "Developer Evangelist at #{@evangelist.company.name}"
     %p= link_to "@#{@evangelist.twitter}", "https://twitter.com/#{@evangelist.twitter}"
     %p Evangelist status: Silver
+
+.row.evangelists
+  %h2 Latest points
+  - @evangelist.notifications.each do |notification|
+    %ul
+      %li.date= notification.date
+      %li.description= notification.description
+      %li.points= notification.points

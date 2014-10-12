@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141011201558) do
+ActiveRecord::Schema.define(version: 20141012090335) do
+
+  create_table "badges", force: true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.integer  "evangelist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "companies", force: true do |t|
     t.string   "name"
@@ -26,6 +34,15 @@ ActiveRecord::Schema.define(version: 20141011201558) do
     t.integer  "company_id"
     t.integer  "points"
     t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", force: true do |t|
+    t.string   "date"
+    t.integer  "points"
+    t.string   "description"
+    t.integer  "evangelist_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
