@@ -1,0 +1,33 @@
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "BattleEvangelist"
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "vendor/modernizr"
+    = csrf_meta_tags
+  %body
+    %header#global
+      / .row
+      /   / %h1.medium-4.columns
+      /   /   = link_to root_path do
+      /   /     BattleEvangelists
+      /     /   %a{:href => "/about"} About
+      /     / - if signed_in?
+      /     /   %li= link_to 'Edit our list', edit_list_path(current_account)
+      /     /   %li= link_to 'Log out', logout_path
+      /     / - else
+      /     /   %li{:class => "sign-up"}= link_to 'Sign Up', signup_path
+      /     /   %li{:class => "log-in"}= link_to 'Log In', login_path
+      .row
+        %ul.medium-12.columns
+          %li= link_to "Evangelists", "/"
+          %li= link_to "Companies", "/"
+          %li= link_to "Events", "/"
+          %li= link_to "FAQ", "/"
+
+  %main
+    = yield
+    = javascript_include_tag "application"
+  %footer
+    .row

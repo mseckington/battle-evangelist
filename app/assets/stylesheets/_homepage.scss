@@ -1,0 +1,60 @@
+.homepage .header {
+  height: 600px;
+}
+.battlegirl {
+  opacity: 1;
+  top: 0;
+  height: 100%;
+  right: 100%;
+  vertical-align: middle;
+  float: left;
+  padding: 0;
+  margin-left: -350px;
+}
+
+.battleguy {
+  opacity: 1;
+  top: 0;
+  height: 100%;
+  left: 100%;
+  vertical-align: middle;
+  float:right;
+  margin-right: -350px;
+}
+
+.homepage .title {
+  width: 480px;
+  float: left;
+
+  h1, h2 {
+    padding-top: 100px;
+    font-weight: bold;
+    line-height: 1.1em;
+    text-align: center;
+    color: #0078c1;
+    width: 480px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.7em;
+    padding-bottom: 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    color: #0078c1;
+    border: 3px solid #0078c1;
+    font-size: 1.3em;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 113px;
+    width: 250px;
+    vertical-align: middle;
+  }
+
+}
+
